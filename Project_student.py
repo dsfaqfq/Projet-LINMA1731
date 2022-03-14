@@ -18,6 +18,7 @@ LORENZ SYSTEM
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
+import matplotlib.colors as colors
 from mpl_toolkits.mplot3d import Axes3D
 from numpy import pi
 import random
@@ -52,9 +53,19 @@ xy = np.sum(matrix, axis=2)
 yz = np.sum(matrix, axis=0)
 xz = np.sum(matrix, axis=1)
 
-# plt.plot(xz[:, 0], xz[:, 1])
-# plt.show()
+x, y, z = np.linspace(-20, 20, 9), np.linspace(-30, 30, 13), np.linspace(0, 50, 11)
 
+plt.pcolormesh(x, y, xy.T)
+plt.colorbar()
+plt.show()
+
+plt.pcolormesh(x, z, xz.T)
+plt.colorbar()
+plt.show()
+
+plt.pcolormesh(y, z, yz.T)
+plt.colorbar()
+plt.show()
 """
 fig = plt.figure()
 ax = fig.gca(projection="3d")
