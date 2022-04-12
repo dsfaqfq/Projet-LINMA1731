@@ -48,7 +48,6 @@ for elem in squares:
     x, y, z = square
     matrix[x + 4][y + 6][z] += 1
 
-
 xy = np.sum(matrix, axis=2)
 yz = np.sum(matrix, axis=0)
 xz = np.sum(matrix, axis=1)
@@ -56,17 +55,23 @@ xz = np.sum(matrix, axis=1)
 x, y, z = np.linspace(-20, 20, 9), np.linspace(-30, 30, 13), np.linspace(0, 50, 11)
 
 plt.pcolormesh(x, y, xy.T)
+plt.xlabel("x")
+plt.ylabel("y")
 plt.colorbar()
 plt.show()
 
 plt.pcolormesh(x, z, xz.T)
+plt.xlabel("x")
+plt.ylabel("z")
 plt.colorbar()
 plt.show()
 
 plt.pcolormesh(y, z, yz.T)
+plt.xlabel("y")
+plt.ylabel("z")
 plt.colorbar()
 plt.show()
-"""
+
 fig = plt.figure()
 ax = fig.gca(projection="3d")
 ax.plot(states[:, 0], states[:, 1], states[:, 2])
@@ -75,7 +80,7 @@ plt.ylabel('y')
 plt.legend(['True system'])
 plt.draw()
 plt.show()
-"""
+
 """
 PLOTLY : TRUE SYSTEM
 """
