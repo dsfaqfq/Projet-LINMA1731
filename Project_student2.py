@@ -59,7 +59,6 @@ plt.pcolormesh(x, y, xy.T / 5000)
 plt.xlabel("x")
 plt.ylabel("y")
 plt.colorbar()
-plt.savefig("pdf_xy.png")
 plt.show()
 
 plt.title("Projection on the xz space")
@@ -67,7 +66,6 @@ plt.pcolormesh(x, z, xz.T / 5000)
 plt.xlabel("x")
 plt.ylabel("z")
 plt.colorbar()
-plt.savefig("pdf_xz.png")
 plt.show()
 
 plt.title("Projection on the yz space")
@@ -75,7 +73,6 @@ plt.pcolormesh(y, z, yz.T / 5000)
 plt.xlabel("y")
 plt.ylabel("z")
 plt.colorbar()
-plt.savefig("pdf_yz.png")
 plt.show()
 
 
